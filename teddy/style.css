@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+}
+.wrapper>.teddy{
+    height: 70%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.wrapper>.teddy .facial-feature{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    width: 120px;
+    height: 110px;
+    z-index: 5;
+    border-radius: 50% 50% 40% 40%;
+    background: rgb(186, 138, 108);
+    box-shadow: -2px 2px 4px rgb(55, 36, 24);;
+}
+
+.wrapper>.teddy .facial-feature .face{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:center;
+    background: rgba(111, 86, 62, 0.049);
+    border-radius: 50% 50% 35% 35%;
+    z-index: 5;
+}
+.wrapper>.teddy .facial-feature .face .eyes{
+    width: 60%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper>.teddy .facial-feature .face .eyes div{
+    width: 15px; height: 20px;
+    background: #000;
+    border-radius: 50%;
+}
+.wrapper>.teddy .facial-feature .face .mouth-container{
+    width: 60%;
+    height: 50px;
+    background: rgba(255, 223, 167, 0.479);
+    border-radius:50% 50% 10px 10px ;
+}
+.wrapper>.teddy .ears{
+    width: 120px; height: 50px;
+    position: absolute;
+    top: 55px; left: 29%;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper>.teddy .ears div{
+    width: 20px; height: 20px;
+    background: rgb(228, 201, 155);
+    border-radius: 50% 50% 0 0;
+    outline: 10px solid rgb(101, 58, 27);
+}
+.wrapper>.teddy .ears div:nth-child(1){
+    transform: rotate(-40deg);
+}
+.wrapper>.teddy .ears div:nth-child(2){
+    transform: rotate(40deg);
+}
+.wrapper>.teddy .facial-feature .face .mouth-container .mouth .nose{
+    width: 25px;
+    height: 22px;
+    background: #332012;
+    border-radius:10px 10px 10px 10px  ;
+    transform: rotate(180deg);
+    clip-path: polygon(49% 0, 2% 100%, 100% 100%);
+    position: relative;
+    top: 10px;
+    left: 18px;
+    
+}
+.wrapper>.teddy .facial-feature .face .mouth-container .mouth{
+    position: relative;
+}
+.wrapper>.teddy .facial-feature .face .mouth-container .mouth:after{
+    content: " ";
+    width: 9px;
+    height: 25px;
+    background: #000;
+    position: absolute;
+    left: 45%; top: 25px;
+    z-index: -1;
+}
+.wrapper>.teddy .stomach{
+    width: 120px;
+    height:130px;
+    background: rgb(101, 58, 27);
+    border-radius: 50%;
+    margin-top: -40px;
+    position: relative;
+}
+.wrapper>.teddy .stomach::before, .wrapper>.teddy .stomach::after{
+    content: " ";
+    width: 50px;
+    height: 70px;
+    border-radius: 0 0 30px 30px;
+    background: rgb(186, 138, 108);
+    position: absolute;
+    top: 20px;
+    z-index: -3;
+}
+.wrapper>.teddy .stomach::before{
+    left: -20px;
+    transform: rotate(65deg);
+}
+.wrapper>.teddy .stomach::after{
+    right: -20px;
+    transform: rotate(-65deg);
+}
+.wrapper>.teddy .legs{
+    width: 150px;
+    height: 80px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.wrapper>.teddy .legs div{
+    width: 60px;
+    height: 100%;
+    background: rgb(186, 138, 108);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.wrapper>.teddy .legs div:nth-child(1){
+    transform: rotate(-20deg);
+    box-shadow: 2px -2px 4px rgb(43, 33, 10);
+}
+.wrapper>.teddy .legs div:nth-child(2){
+    transform: rotate(20deg);
+    box-shadow: -2px -2px 4px rgb(43, 33, 10);
+}
+.wrapper>.teddy .legs div::before,.wrapper>.teddy .legs div::after{
+    content: " ";
+    width: 80%;
+    height: 80%;
+    background: rgb(228, 201, 155);
+    position: absolute;
+    border-radius: 50%;
+}
+.text{
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
