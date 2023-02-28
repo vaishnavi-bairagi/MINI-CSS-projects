@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+body,.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+.container>.shivling{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shivling .ling{
+    width: 90px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(9, 8, 8);
+    position: relative;
+    top: 8px;
+    border-radius: 45% 45% 0 0;
+    box-shadow: inset 8px 8px 4px #363535;
+}
+.shivling .ling::before, .shivling .ling::after{
+    content: " ";
+    width: 20px;
+    height: 30px;
+    background: green;
+    position: absolute;
+}
+.shivling .ling::before{
+    top: -6px; right: 25px;
+    transform: rotate(-20deg);
+    border-radius: 0px 10px 0 20px;
+}
+.shivling .ling::after{
+    top: -40px; left: 25px;
+    transform: rotate(20deg);
+    border-radius: 10px 0 20px 0;
+}
+.shivling .ling .tilak{
+    width: 50px;
+    height: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.shivling .ling .tilak div{
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+}
+.shivling .ling .tilak::before{
+    content: " ";
+    width: 12px;
+    height: 35px;
+    background: red;
+    position: absolute;
+    border-radius: 50%;
+    left: 40%;
+}
+.shivling .ling .tilak::after{
+    content: " ";
+    width: 10px;
+    height: 10px;
+    background: rgb(6, 6, 5);
+    border-radius: 50%;
+    position: absolute;
+    left: 22px;
+}
+.shivling .water{
+    width: 290px;
+    height: 10px;
+    background: rgb(15, 102, 134);
+    filter: blur(3px);
+    position: absolute;
+    z-index: 2;
+    top: 38%; left: 10%;
+    border-radius: 20px 20px 0 0;
+}
+.water::after{
+    content: " ";
+    width: 0;
+    height: 20px;
+    right:2px;
+    background: rgb(15, 102, 134);
+    position: absolute;
+    filter: blur(4px);
+    transform-origin: right;
+    animation: waterFlow 1.2s linear infinite;
+}
+@keyframes waterFlow {
+    0%{
+        width: 20px;
+        
+    }
+    100%{
+        
+        height:100px;
+        width: 20px;
+        border-radius: 50%;
+    }
+}
+.shivling .yoni{
+    width: 300px;
+    height: 20px;
+    background: rgb(9, 8, 8);
+    border-radius: 10px 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 40px;
+    box-shadow: inset 2px 2px 2px rgb(92, 92, 92);
+    z-index: 0;
+}
+.shivling .yoni .yoni-div{
+    content: " ";
+    width: 70%;
+    height: 100%;
+    background: rgb(9, 8, 8);
+    border-radius: 10px 10px;
+    box-shadow: inset -2px -2px 2px rgb(32, 32, 32);
+    position: absolute;
+    top: 12px; left: 0;
+}
+.shivling .yoni::before{
+    content: " ";
+    width: 15px;
+    height: 30px;
+    border-radius: 0 10px 20px 2px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.shivling .existence{
+    width: 55%;
+    height:160px;
+}
+.shivling .existence div{
+    width: 100%;
+    height: 30%;
+    background: rgb(9, 8, 8);
+    
+}
+.shivling .existence div:nth-child(1){
+    border-radius: 0 0 50% 50%;
+    box-shadow: inset -3px -3px 3px rgb(54, 54, 54);
+}
+.shivling .existence div:nth-child(2){
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    bottom: 10px;
+    box-shadow: inset 3px -2px 3px rgb(54, 54, 54);
+}
+.shivling .existence div:nth-child(2)::after{
+    content: " ";
+    width: 200px;
+    height: 20px;
+    background: rgb(9, 9, 9);
+    position: absolute;
+    bottom: 0;
+    left: -16px;
+    border-radius: 20px;
+}
+.container .text{
+    font-family: 'Bodoni Moda', serif;
+    text-transform: uppercase;
+    position: relative;
+    top: -70px;
+    left: 80px;
+}
+.text h4{
+    font-size: 18px;
+}
+.text h1{
+    color: rgb(255, 0, 17);
+    filter: drop-shadow(4px 4px 4px rgb(178, 178, 178));
+    font-size:40px;
+}
